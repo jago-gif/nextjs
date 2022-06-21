@@ -3,6 +3,7 @@ import { useState } from "react";
 import cn from "classnames";
 import Image from "next/image";
 
+
 export default function Header() {
   const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false);
 
@@ -10,19 +11,13 @@ export default function Header() {
     <header className="bg-green-600">
       <div className="flex flex-wrap items-center justify-between lg:container px-4 py-6 mx-auto md:flex-no-wrap md:px-6">
         <div className="flex items-center">
-          <Image
-            src="/tailwind-logo.svg"
-            width={40}
-            height={40}
-            priority
-            alt="Tailwind CSS logo"
-          />
-
-          <Link href="/">
+         
+         <Link href="/">
             <a className="text-lg md:text-xl font-bold ml-3 text-white">
-              Next.js Starter Tailwind
-            </a>
+            <div className="logo-navbar"> </div>            </a>
           </Link>
+         
+      
         </div>
 
         <button
@@ -46,12 +41,12 @@ export default function Header() {
           )}
         >
           {[
-            { title: "Home", route: "/" },
-            { title: "About", route: "/about" },
+            { title: "Inicio", route: "/" },
+            { title: "Nosotros", route: "/about" },
           ].map(({ route, title }) => (
             <li className="mt-3 md:mt-0 md:ml-6" key={title}>
               <Link href={route}>
-                <a className="block text-white">{title}</a>
+                <a className="block text-white text-2xl">{title}</a>
               </Link>
             </li>
           ))}

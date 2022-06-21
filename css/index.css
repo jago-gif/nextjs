@@ -1,3 +1,31 @@
 @tailwind base;
 @tailwind components;
+.logo-navbar {
+    height: 80px;
+    width: 160px;
+    position: relative;
+    background-size: contain;
+    background-image: url("../public/logo.png");
+    }
+    .img-head{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background-size: cover;
+    background-image: url("../public/1.jpg"); 
+    }
+    .img-gradiant{
+        height: 800px;
+        width: 100%;
+        background: rgb(39,121,9);
+        background: linear-gradient(4deg, rgba(34, 96, 12, 0.589) 0%, rgba(41, 121, 9, 0.075) 100%);    
+    }
+    .texto-para-img{
+        
+        /* centrar vertical y horizontalmente */
+        position: absolute;
+        top: 70%;
+        left: 35%;
+        margin: -25px 0 0 -25px; /* aplicar a top y al margen izquierdo un valor negativo para completar el centrado del elemento hijo */      
+    }
 @tailwind utilities;
